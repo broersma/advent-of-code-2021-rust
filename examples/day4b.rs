@@ -65,7 +65,7 @@ impl FromStr for Board {
 }
 
 pub fn main() {
-    let mut input = include_str!("../../day4.txt").split("\n\n");
+    let mut input = include_str!("../day4.txt").split("\n\n");
 
     let numbers: Vec<_> = input
         .next()

@@ -2,7 +2,7 @@ pub fn main() {
     let mut depth = 0;
     let mut pos = 0;
     let mut aim = 0;
-    include_str!("../../day2.txt")
+    include_str!("../day2.txt")
         .lines()
         .filter(|l| !l.is_empty())
         .map(|l| l.split(" ").collect())

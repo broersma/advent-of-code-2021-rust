@@ -1,7 +1,7 @@
 use itertools::{Either, Itertools};
 
 pub fn main() {
-    let input_nums: Vec<_> = include_str!("../../day3.txt")
+    let input_nums: Vec<_> = include_str!("../day3.txt")
         .lines()
         .map(|s| u32::from_str_radix(s, 2).unwrap())
         .collect();
