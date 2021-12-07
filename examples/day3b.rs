@@ -1,4 +1,4 @@
-use itertools::{Itertools, Either};
+use itertools::{Either, Itertools};
 
 pub fn main() {
     let input_nums: Vec<_> = include_str!("../../day3.txt")
@@ -9,14 +9,13 @@ pub fn main() {
     let mut nums = input_nums.clone();
 
     for i in (0..12).rev() {
-        let (zeroes, ones): (Vec<_>, Vec<_>) = nums.iter()
-                                        .partition_map(|r| {
-                                            if r & (1 << i) == 0 {
-                                                Either::Left(r)
-                                            } else {
-                                                Either::Right(r)
-                                            }
-                                        });
+        let (zeroes, ones): (Vec<_>, Vec<_>) = nums.iter().partition_map(|r| {
+            if r & (1 << i) == 0 {
+                Either::Left(r)
+            } else {
+                Either::Right(r)
+            }
+        });
 
         nums = if zeroes.len() > ones.len() {
             zeroes
@@ -34,14 +33,13 @@ pub fn main() {
     let mut nums = input_nums;
 
     for i in (0..12).rev() {
-        let (zeroes, ones): (Vec<_>, Vec<_>) = nums.iter()
-                                        .partition_map(|r| {
-                                            if r & (1 << i) == 0 {
-                                                Either::Left(r)
-                                            } else {
-                                                Either::Right(r)
-                                            }
-                                        });
+        let (zeroes, ones): (Vec<_>, Vec<_>) = nums.iter().partition_map(|r| {
+            if r & (1 << i) == 0 {
+                Either::Left(r)
+            } else {
+                Either::Right(r)
+            }
+        });
 
         nums = if zeroes.len() <= ones.len() {
             zeroes
