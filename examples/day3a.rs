@@ -1,5 +1,5 @@
 pub fn main() {
-    let nums = include_str!("../../day3.txt")
+    let nums = include_str!("../day3.txt")
         .lines()
         .map(|s| u32::from_str_radix(s, 2).unwrap());
 
@@ -7,7 +7,7 @@ pub fn main() {
 
     for i in 0..12 {
         let mut total = 0;
-        
+
         nums.clone().for_each(|n| {
             if n & (1 << i) == 0 {
                 total -= 1;

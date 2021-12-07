@@ -1,5 +1,5 @@
 pub fn main() {
-    let input: Vec<_> = include_str!("../../day7.txt")
+    let input: Vec<_> = include_str!("../day7.txt")
         .lines()
         .next()
         .unwrap()
@@ -12,15 +12,7 @@ pub fn main() {
 
     let mut fuel_usage = std::i32::MAX;
     for i in min..=max {
-        fuel_usage = fuel_usage.min(
-            input
-                .iter()
-                .map(|n| {
-                    let x = (n - i).abs();
-                    x * (x + 1) / 2
-                })
-                .sum(),
-        );
+        fuel_usage = fuel_usage.min(input.iter().map(|n| (n - i).abs()).sum());
     }
 
     println!("{}", fuel_usage);

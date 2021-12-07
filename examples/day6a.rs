@@ -1,5 +1,5 @@
 pub fn main() {
-    let input: Vec<_> = include_str!("../../day6.txt")
+    let input: Vec<_> = include_str!("../day6.txt")
         .lines()
         .next()
         .unwrap()

@@ -50,7 +50,7 @@ impl FromStr for Line {
 }
 
 pub fn main() {
-    let input: Vec<_> = include_str!("../../day5.txt")
+    let input: Vec<_> = include_str!("../day5.txt")
         .lines()
         .map(|n| n.parse::<Line>().unwrap())
         .collect();
